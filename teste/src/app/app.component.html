@@ -1,0 +1,15 @@
+<nav>
+  <div class="nav-wrapper">
+    <a class="brand-logo right">Logo</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ><a routerLink="/">Home</a></li>
+      <li routerLinkActive="active"><a routerLink="/login">Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <input type="text" [(ngModel)]="teste">
+  {{ teste }}
+  <router-outlet></router-outlet>
+</div>
