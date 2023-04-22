@@ -1,0 +1,34 @@
+<div class="image">
+    <div class="titulo">
+        <h4>
+            {{alb.nome | titlecase}}
+            {{albClass.getSelectedsText()}}
+        </h4>
+    </div>
+    <div class="image2" #image  [style.background-image]="'url(https://imgur.com/' + alb.capa + '.jpg)'">
+        <mat-spinner diameter="40" *ngIf="loading_image"></mat-spinner>
+    </div>
+    <div class="bottom">
+        
+        <span class="material-icons edit" routerLink="{{alb.nome}}/edit">
+            build_circle
+        </span>
+        <span class="material-icons remove" (click)="delete()" [ngClass]="loading_del?'loading-icon':''">
+            <mat-spinner diameter="20" *ngIf="loading_del"></mat-spinner>
+            {{loading_del?"":"remove_circle"}}
+        </span>
+
+        <span class="material-icons checkedList" (click)="checkedList()" [ngClass]="loading_list?'loading-icon':''">
+            <mat-spinner diameter="20" *ngIf="loading_list"></mat-spinner>
+            {{loading_list?"":"playlist_add_check_circle"}}
+        </span>
+        <span class="material-icons album" routerLink="/selecao/{{alb.nome}}">
+            arrow_circle_right
+        </span>
+        
+
+        
+       
+
+    </div>
+</div>

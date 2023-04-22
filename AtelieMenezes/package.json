@@ -1,0 +1,15 @@
+{
+  "name": "ateliemenezes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

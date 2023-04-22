@@ -1,0 +1,56 @@
+.image{
+    padding: 5px;
+    background-color: var(--black1);
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.image2{
+    min-width: 100px;
+    min-height: 150px;
+    background-color: #d1d0d0;
+    border-radius: 5px;
+    
+    /* background-image: url(/assets/default/images/especialidades/s3.jpg); */
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    margin-bottom: 5px;
+}
+
+:host ::ng-deep .whiteSpinner circle, .mat-spinner circle {   
+    stroke: white;
+    width: 1px;
+}
+
+.titulo button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.delete{
+    background-color: var(--vermelho1);
+    color:white
+}
+

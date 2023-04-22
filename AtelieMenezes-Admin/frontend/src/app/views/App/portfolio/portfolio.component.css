@@ -1,0 +1,50 @@
+.mat-card-title{
+    margin-bottom: 20px;
+}
+
+.example-input-label,
+.example-add-tab-button,
+.example-delete-tab-button {
+  margin: 8px;
+}
+
+.tab-container{
+  padding: 10px;
+}
+
+.container{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.mat-card-container{
+  display:flex;
+  flex-direction: row;
+}
+
+.container2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #504d4c;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.circle{
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+:host ::ng-deep .whiteSpinner circle, .mat-spinner circle {   
+  stroke: white;
+  width: 1px;
+}
+
+.descricao-container{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}

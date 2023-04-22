@@ -1,0 +1,46 @@
+@include fab.core-styles;
+
+/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+:root{
+    --vermelho1:#e36e6b;
+    --blueprimary:#3f51b5;
+    --black1:#444343;
+}
+
+.mat-drawer-container {
+    display: contents !important;
+}
+.mat-drawer-content {
+    height: auto !important;
+}
+/* SNACKBAR */
+
+.blue-snackbar {
+    background: #2196F3;
+    color: white
+}
+.success-snackbar {
+    background: #15b44a;
+    color: white
+}
+.success-snackbar .mat-simple-snackbar-action {
+    color: white !important;
+}
+.error-snackbar {
+    background: #b42015;
+    color: white
+}
+.error-snackbar .mat-simple-snackbar-action {
+    color: white !important;
+}
+.warning-snackbar {
+    background: #efe233;
+    color: white
+}
+.warning-snackbar .mat-simple-snackbar-action {
+    color: white !important;
+}

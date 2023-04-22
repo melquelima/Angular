@@ -1,0 +1,37 @@
+<mat-card>
+    <mat-card-title>{{album.nome |titlecase}}</mat-card-title>
+    
+    <mat-card class="mat-elevation-z5">
+        <!-- <mat-card-title>Especialidades</mat-card-title> -->
+        <div class="container-tab">
+        <mat-tab-group [selectedIndex]="selected.value"
+                       (selectedIndexChange)="selected.setValue($event)">
+          <mat-tab label="Todas">
+           
+            <div class="tab-container">
+              <mat-card class="mat-elevation-z5" class="mat-card">
+                <div class="mat-card-container">
+                  <div class="container">
+                    <app-selecao-image *ngFor="let pic of album.pics; let idx_prt = index" [image]="pic"></app-selecao-image>
+                  </div>
+                </div>
+              </mat-card>
+            </div>
+          </mat-tab>
+          <mat-tab label="Selecionadas">
+           
+            <div class="tab-container">
+              <mat-card class="mat-elevation-z5" class="mat-card">
+                <div class="mat-card-container">
+                  <div class="container">
+                    <app-selecao-image *ngFor="let pic of album.pics" [image]="pic" [show]="pic.checked"></app-selecao-image>
+                  </div>
+                </div>
+              </mat-card>
+            </div>
+          </mat-tab>
+
+        </mat-tab-group>
+        </div>
+    </mat-card>
+</mat-card>

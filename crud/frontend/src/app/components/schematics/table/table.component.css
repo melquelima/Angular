@@ -1,0 +1,13 @@
+.full-width-table {
+  width: 100%;
+}
+.header{
+  background-color: #3f51b5;
+  color:white
+}
+
+.header th{
+  color: white;
+    font-weight: 300;
+    font-size: 1rem;
+}

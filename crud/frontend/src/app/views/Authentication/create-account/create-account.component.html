@@ -1,0 +1,17 @@
+<form>
+    <mat-form-field>
+        <input matInput type="text" placeholder="Login" [(ngModel)]="user.name" name="login">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="password" placeholder="Senha" [(ngModel)]="user.password" name="senha">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="password" placeholder="Confirme" [(ngModel)]="confirm" name="confirmacao">
+    </mat-form-field>
+</form>
+<span class="entrar">
+    <a routerLink="/login">Entrar</a>
+</span>
+<button mat-raised-button color="primary" (click)="createAccount()">
+    Cadastrar
+</button>

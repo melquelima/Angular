@@ -1,0 +1,47 @@
+<div class="container" *ngIf="show">
+    <div 
+        class="image" 
+        [ngClass]="loading_image?'image-loading':''" #picture 
+        [style.background-image]="'url(https://imgur.com/' + image.imagem + '.jpg)'"
+        (click)="full.click()"
+        loading="lazy"
+    >
+    <a data-fancybox="single" [attr.data-caption]="image.nome" [href] = "'https://imgur.com/' + image.imagem + '.jpg'" #full></a>
+    
+        <mat-spinner diameter="40" *ngIf="loading_image" class="loading"></mat-spinner>
+        
+    </div>
+    <div class="bottom">
+        <div class="bottom-left" *ngIf="!loading_image">
+            <span class="">
+                {{image.nome}}
+            </span>
+            <!-- <mat-spinner diameter="30" *ngIf="iconType == 4"></mat-spinner> -->
+        </div>
+        <div class="bottom-right" *ngIf="!loading_image">
+            <span class="material-icons add" *ngIf="!image.checked && !loading_status" (click)="check(true)">
+                add_circle
+            </span>
+            <span class="material-icons cancel" *ngIf="false">
+                cancel
+            </span>
+            <span class="material-icons check" *ngIf="image.checked && !loading_status" (click)="check(false)">
+                check_circle
+            </span>
+            <mat-spinner diameter="30" *ngIf="loading_status"></mat-spinner>
+        </div>
+    </div>
+
+</div>
+
+<!-- <div  data-fancybox="gallery" 
+            data-src="https://lipsum.app/id/2/1024x768"
+            data-caption="Optional caption,&lt;br /&gt;that can contain &lt;em&gt;HTML&lt;/em&gt; code">
+            <img src="https://lipsum.app/id/2/200x150" />
+        </div>
+
+
+        <a data-fancybox="single"
+        href={{image.imagem}}>
+            <img src="https://lipsum.app/id/1/300x225" />
+          </a> -->

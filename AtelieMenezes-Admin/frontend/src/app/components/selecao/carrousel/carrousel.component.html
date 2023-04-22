@@ -1,0 +1,12 @@
+<ngb-carousel>
+    <ng-template ngbSlide *ngFor="let img of images" [ngForTrackBy]="trackItem">
+      <div class="picsum-img-wrapper">
+        <div class="image" [style.background-image]="'url(https://imgur.com/' + img.imagem + '.jpg)'">
+        </div>
+      </div>
+      <div class="carousel-caption">
+        <h3>{{img.nome}}</h3>
+        <p>Suas fotos aparecerão aqui</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>

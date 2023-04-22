@@ -1,0 +1,23 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+button {
+    width: 100%;
+    margin-top: 20px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    padding:5px;
+}
+.account{
+    display: flex;
+    justify-content: flex-end;
+}
+a{
+    text-decoration: none;
+}
+:host ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {   
+    stroke: white;
+    width: 1px;
+}

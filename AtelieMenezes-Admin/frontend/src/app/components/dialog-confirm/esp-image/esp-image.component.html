@@ -1,0 +1,32 @@
+<div class="image">
+    <div class="image2" #image  [style.background-image]="'url(https://imgur.com/' + esp.imagem + '.jpg)'">
+        <mat-spinner diameter="40" *ngIf="loading"></mat-spinner>
+    </div>
+    <div class="titulo">
+        <mat-form-field>
+            <input matInput type="text" placeholder="Título"  name="price" [(ngModel)]="esp.nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Url"  name="url" [(ngModel)]="esp.url">
+        </mat-form-field>
+        <button type="button" mat-raised-button color="primary" (click)="changeTitle()" *ngIf="old_title != esp.nome || old_url != esp.url">
+            <span *ngIf="!loading3">
+                Salvar
+            </span>
+            <mat-spinner diameter="30" class="whiteSpinner" *ngIf="loading3"></mat-spinner>
+        </button>
+        <button type="button" mat-raised-button color="primary" (click)="fileInput.click()">
+            <span *ngIf="!loading2">
+                Alterar imagem
+            </span>
+            <mat-spinner diameter="30" class="whiteSpinner" *ngIf="loading2"></mat-spinner>
+        </button>
+        <input hidden (change)="changeImage()" #fileInput type="file" id="file">
+        <button type="button" mat-raised-button class="delete" (click)="delete()">
+            <span *ngIf="!loading4">
+                Excluir
+            </span>
+            <mat-spinner diameter="30" class="whiteSpinner" *ngIf="loading4"></mat-spinner>
+        </button>
+    </div>
+</div>

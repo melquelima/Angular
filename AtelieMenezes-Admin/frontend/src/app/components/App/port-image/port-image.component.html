@@ -1,0 +1,35 @@
+<div class="image">
+    <div class="image2" #image  [style.background-image]="'url(https://imgur.com/' + portImage.imagem + '.jpg)'">
+        <mat-spinner diameter="40" *ngIf="loading_image"></mat-spinner>
+    </div>
+    <div class="titulo">
+        <button type="button" mat-raised-button class="delete" (click)="portDeleteImage()">
+            <span *ngIf="!loading_del">
+                Excluir
+            </span>
+            <mat-spinner diameter="30" class="whiteSpinner" *ngIf="loading_del"></mat-spinner>
+        </button>
+        <button type="button" mat-raised-button color="primary" (click)="fileInput.click()">
+            <span *ngIf="!loading_update">
+                Alterar imagem
+            </span>
+            <mat-spinner diameter="30" class="whiteSpinner" *ngIf="loading_update"></mat-spinner>
+        </button>
+        <input hidden (change)="updateImage()" #fileInput type="file" id="file">
+        <div class="arrows">
+            <button type="button" mat-raised-button color="primary" class="arrow" (click)="orderToLeft()">
+                <span class="material-icons" *ngIf="!loading_left">
+                    chevron_left
+                </span>
+                <mat-spinner diameter="30" class="whiteSpinner" *ngIf="loading_left"></mat-spinner>
+            </button>
+            <button type="button" mat-raised-button color="primary"  class="arrow" (click)="orderToRight()">
+                <span class="material-icons" *ngIf="!loading_right">
+                    chevron_right
+                </span>
+                <mat-spinner diameter="30" class="whiteSpinner" *ngIf="loading_right"></mat-spinner>
+            </button>
+
+        </div>
+    </div>
+</div>

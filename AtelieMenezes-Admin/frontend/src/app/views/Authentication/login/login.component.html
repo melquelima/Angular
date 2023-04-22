@@ -1,0 +1,14 @@
+<form>
+    <mat-form-field>
+        <input matInput type="text" placeholder="Login" [(ngModel)]="user.userName" name="login">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="password" placeholder="Senha" [(ngModel)]="user.password" name="senha">
+    </mat-form-field>
+</form>
+<button mat-raised-button color="primary" (click)="login()">
+    <span *ngIf="!loading">
+        Entrar
+    </span>
+    <mat-spinner diameter="20" *ngIf="loading"></mat-spinner>
+</button>

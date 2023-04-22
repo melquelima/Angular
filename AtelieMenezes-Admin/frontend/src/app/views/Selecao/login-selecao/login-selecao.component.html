@@ -1,0 +1,23 @@
+<div class="container-center">
+    <h1>{{album.nome | titlecase}}</h1>
+    <p>Por questoes de segurança e direitos de imagem os albuns são protegidos por senha, caso tenha esquecido sua senha solicite ao seu fotógrafo!</p>
+    
+    <div class="image-header" #image [style.background-image]="'url(https://imgur.com/' + album.capa + '.jpg)'">
+        <mat-spinner diameter="60" *ngIf="loading_image"></mat-spinner>
+    </div>
+
+    <div class="login-content">
+        <form>
+            <mat-form-field>
+                <input matInput type="password" placeholder="Senha" [(ngModel)]="password" name="senha">
+            </mat-form-field>
+        </form>
+        <button mat-raised-button color="primary" (click)="login()">
+            <span *ngIf="!loading">
+                Entrar
+            </span>
+            <mat-spinner diameter="20" *ngIf="loading"></mat-spinner>
+        </button>
+    </div>
+</div>
+

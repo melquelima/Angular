@@ -1,0 +1,42 @@
+.header{
+    display:flex;
+    align-items:center;
+    background-color: #1d1d21e6;
+    position: fixed;
+    min-height: 80px;
+    z-index: 999;
+}
+.header a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.header .title-group{
+    padding-left: 25px;
+    width: 100%;
+    text-align: center;
+}
+a{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.header .title-group i{
+    padding-right: 5px;
+    text-decoration: none;
+}
+
+.counter{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(127, 224, 215);
+    width: 57px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 1em rgb(252, 252, 252);
+}

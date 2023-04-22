@@ -1,0 +1,9 @@
+.confirm{
+    background-color:var(--blueprimary);
+    color:white
+}
+
+.cancel{
+    background-color:var(--vermelho1);
+    color:white
+}

@@ -1,0 +1,10 @@
+npm init -y
+npm i json-server
+npm i -g @angular/cli
+ng new frontend --minimal
+ng add @angular/material
+ng g c components/template/header
+ng build --base-href / --deploy-url /static/
+
+npm install @material/fab
+https://fonts.google.com/icons?selected=Material+Icons

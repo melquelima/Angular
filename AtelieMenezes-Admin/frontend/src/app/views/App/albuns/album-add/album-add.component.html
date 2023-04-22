@@ -1,0 +1,42 @@
+<mat-card>
+    <mat-card-title>Novo Album</mat-card-title>
+    <form>
+        <div class="container">
+            <div class="capa" [style.background-image]="'url(https://imgur.com/' + albImage + '.jpg)'">
+                <div class="bottom-right">
+                    <span class="material-icons add" [ngClass]="loading_capa?'spin':''" (click)="fileInput.click()">
+                        change_circle
+                    </span>
+                    <input hidden (change)="uploadImage()" #fileInput type="file" id="file">
+                </div>
+            </div>
+            <mat-form-field>
+                <mat-label>Nome:</mat-label>
+                <input matInput [(ngModel)]="nome" name="desc"/>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Senha:</mat-label>
+                <input matInput [(ngModel)]="senha" name="senha"/>
+            </mat-form-field>
+            <div class="images-container">
+                <div class="images-desc">
+                    <span>
+                        Imagens Carregadas ({{images.length}})
+                    </span>
+                </div>
+                <button mat-raised-button color="primary" (click)="inputFile.click()">
+                    Carregar Imagens
+                </button>
+                <input hidden (change)="selectImages()" #inputFile type="file" id="file2" multiple>
+            </div>
+            
+            <button mat-raised-button color="primary" (click)="newAlbum()" [hidden]="progress != 0">
+                Criar Album
+            </button>
+            <mat-progress-bar mode="determinate" [value]="progress" [hidden]="progress == 0"></mat-progress-bar>
+        </div>
+       
+    
+        
+    </form>
+</mat-card>

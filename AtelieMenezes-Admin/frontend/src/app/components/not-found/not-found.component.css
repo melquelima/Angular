@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Bevan");
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(40,40,40);
+    height: 500px;
+    align-items: center;
+}
+
+/* span{
+    padding: 100px;
+    background-color: grey;
+    border-radius: 10px;
+} */
+
+.text {
+    font-family: "Bevan", cursive;
+    font-size: 130px;
+    text-align: center;
+    letter-spacing: 5px;
+    background-color: black;
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+span {
+    font-size: 1.2em;
+}
+
+
+@media screen and (max-width: 880px) {
+    p {
+        font-size: 14vw;
+    }
+}

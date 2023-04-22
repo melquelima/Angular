@@ -1,0 +1,84 @@
+.header{
+    display:flex;
+    align-items:center;
+    background-color: var(--c1);
+    padding: 45px;
+}
+.header a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header .title-group{
+    margin: 0 15px;
+    display: inline-block;
+    text-align: center;
+    WIDTH: 100%;
+}
+.header .title-group i{
+    padding-right: 5px;
+    text-decoration: none;
+}
+.menuitem{
+   font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    pointer-events: all;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 700;
+    transition: all 150ms ease-in;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #FFF;
+    margin-right: 30px;
+    cursor: pointer;
+
+}
+
+.menuitem:hover{
+    color:#d0d762
+}
+
+
+.social{
+    margin: 0 15px;
+    display: flex;
+    text-align: center;
+    width: 10%;
+
+}
+
+.social a{
+    margin-right: 10px;
+}
+
+.social i{
+    text-decoration: none;
+    color:white
+}
+
+icon{
+    text-decoration: none;
+    fill:white;
+    display: flex;
+    text-align: center;
+}
+
+::ng-deep .mat-menu-panel{
+    border-radius: 0px !important;
+    margin-top: 5px !important;
+}
+::ng-deep .mat-menu-panel button{
+    color:white;
+    border-bottom: 1px solid #404040;
+}
+
+::ng-deep .mat-menu-content{
+    background-color: #26262a !important;
+    padding-bottom: 0px !important;
+}

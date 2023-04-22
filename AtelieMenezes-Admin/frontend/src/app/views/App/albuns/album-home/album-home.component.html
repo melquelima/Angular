@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-title>Albuns</mat-card-title>
+    
+    <mat-card class="mat-elevation-z5">
+        <!-- <mat-card-title>Especialidades</mat-card-title> -->
+        <div class="container">
+            <!-- <app-esp-image [esp]="images[0]"></app-esp-image> -->
+            <app-album *ngFor="let i of albuns" [alb]="i"></app-album>
+            <!-- <app-esp-image src="I6G0wEk"></app-esp-image>
+            <app-esp-image src="jvh1l1Q"></app-esp-image>
+            <app-esp-image src="X4mXt2L"></app-esp-image>
+            <app-esp-image src="SD0W81M"></app-esp-image> -->
+        </div>
+    </mat-card>
+    <button mat-raised-button color="primary" class="add-esp" routerLink="add">
+        <span *ngIf="!loading">
+            Adcionar Album
+        </span>
+        <mat-spinner diameter="30" class="whiteSpinner" *ngIf="loading"></mat-spinner>
+    </button>
+</mat-card>

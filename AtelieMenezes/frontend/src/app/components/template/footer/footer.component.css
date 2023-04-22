@@ -1,0 +1,93 @@
+.footerContainer {
+    display: flex;
+    flex-direction:column;
+    padding: 0px !important;
+    align-items: unset;
+}
+
+.footer1{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+.footer1 div{
+    display:block;
+    width: 100%;
+}
+
+.footer{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 15px;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    font-family: 'Karla', sans-serif;
+    /* line-height: 24px; */
+    color: #cdcdcd;
+    box-sizing: border-box;
+    background: #26262a;;
+    display: block;
+    padding: 20px;
+}
+
+.subfooter{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 15px;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    font-family: 'Karla', sans-serif;
+    /* line-height: 24px; */
+    color: #cdcdcd;
+    box-sizing: border-box;
+    background: #212124;
+    display: block;
+    padding: 20px;
+}
+
+
+.text-center{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 15px;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    font-family: 'Karla', sans-serif;
+    /* line-height: 24px; */
+    color: #cdcdcd;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+}
+
+.text-center a{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 15px;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    font-family: 'Karla', sans-serif;
+    line-height: 24px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: transparent;
+    text-decoration: none;
+    transition: all 150ms ease-in;
+    color: #cdcdcd;
+}
+
+.widget-title{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    margin-top: 0;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-bottom: 15px !important;
+    color: #fff;
+}

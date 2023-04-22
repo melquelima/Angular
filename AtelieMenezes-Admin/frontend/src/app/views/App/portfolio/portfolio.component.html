@@ -1,0 +1,49 @@
+<mat-card>
+    <mat-card-title>Portfolio</mat-card-title>
+      
+      <mat-tab-group [selectedIndex]="selected.value"
+                     (selectedIndexChange)="selected.setValue($event)">
+        <mat-tab *ngFor="let tab of portfolios; let idx_prt = index" [label]="tab.nome">
+          <div class="tab-container">
+            <mat-card class="mat-elevation-z5" class="mat-card">
+              <div class="descricao-container">
+                <mat-form-field>
+                    <mat-label>Descrição</mat-label>
+                    <textarea matInput [(ngModel)]="tab.descricao" name="desc" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="5"></textarea>
+                </mat-form-field>
+                <button mat-raised-button color="primary" (click)="changeDesc(tab.id,tab.descricao)">
+                    Salvar descrição
+                </button>
+              </div>
+              <div class="mat-card-container">
+                <div class="container">
+                    <app-port-image 
+                      *ngFor="let portImage of tab.pics; let idx_prt_pic = index" 
+                      [portImage]="portImage" 
+                      (left)="orderToLeft(idx_prt,idx_prt_pic)" 
+                      (right)="orderToRigth(idx_prt,idx_prt_pic)"
+                      (close)="refresh()"
+                    ></app-port-image>
+                </div>
+                <div class="container2">
+                  <mat-spinner diameter="30" class="whiteSpinner" *ngIf="loading"></mat-spinner>
+                  <span class="material-icons circle" (click)="portAddEmptyImage(tab.id)" *ngIf="!loading">
+                    add_circle
+                  </span>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+          
+          
+        </mat-tab>
+      </mat-tab-group>
+</mat-card>
+
+<!-- 
+<button mat-raised-button
+                  class="example-delete-tab-button"
+                  [disabled]="tabs.length === 1"
+                  (click)="removeTab(index)">
+            Delete Tab
+          </button> -->
