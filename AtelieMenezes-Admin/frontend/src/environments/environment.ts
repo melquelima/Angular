@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  backUrl: 'http://localhost:4000'
+  backUrl: window.location.protocol + "//"+  window.location.hostname + ":4000"
 };
 
 /*

@@ -5,6 +5,7 @@ ng new frontend --minimal
 ng add @angular/material
 ng g c components/template/header
 ng build --base-href / --deploy-url /static/
+ng serve -c development --host 0.0.0.0 --disable-host-check
 
 npm install @material/fab
 https://fonts.google.com/icons?selected=Material+Icons

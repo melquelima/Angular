@@ -20,6 +20,10 @@ export class AlbumHomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.update()
+  }
+
+  update(){
     this.selecaoService.getAlbums().subscribe((albs:Album[])=>{
       this.albuns = albs
     },err=>{
@@ -38,7 +42,7 @@ export class AlbumHomeComponent implements OnInit {
 }
 
   delete():void{
-    
+    this.update()
   }
 
 

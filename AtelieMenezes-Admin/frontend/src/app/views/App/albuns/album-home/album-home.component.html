@@ -5,7 +5,7 @@
         <!-- <mat-card-title>Especialidades</mat-card-title> -->
         <div class="container">
             <!-- <app-esp-image [esp]="images[0]"></app-esp-image> -->
-            <app-album *ngFor="let i of albuns" [alb]="i"></app-album>
+            <app-album *ngFor="let i of albuns" [alb]="i" (close)="delete()"></app-album>
             <!-- <app-esp-image src="I6G0wEk"></app-esp-image>
             <app-esp-image src="jvh1l1Q"></app-esp-image>
             <app-esp-image src="X4mXt2L"></app-esp-image>

@@ -879,6 +879,8 @@
 	    overflow: hidden;
 	    background: #26262a;
 	    box-shadow: none;
+
+		display: none !important;
 	}
 	.navbar .navbar-nav {
 	    width: 720px;
@@ -990,6 +992,11 @@
 	div#sticky-filter.sticky-filter.dark-wrapper.container {
 		top: 0 !important;
 	}
+}
+
+
+.navbar-collapse{
+	display: none !important;
 }
 
 
